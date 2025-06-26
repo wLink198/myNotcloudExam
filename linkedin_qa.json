@@ -1,0 +1,2641 @@
+[
+  {
+    "question": "Given the string \"strawberries\" saved in a variable called fruit, what would `fruit.substring(2, 5)` return?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "rawb"
+      },
+      {
+        "key": "B",
+        "text": "raw"
+      },
+      {
+        "key": "C",
+        "text": "awb"
+      },
+      {
+        "key": "D",
+        "text": "traw"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "** The substring method accepts two arguments. - The first argument is the index to start(includes that char at 2) - and the second the index of the string to end the substring(excludes the char at 5). - Strings in Java are like arrays of chars. - Therefore, the method will return \"raw\" as those are the chars in indexes 2,3 and 4. - You can also take the ending index and subtract the beginning index from it, to determine how many chars will be included in the substring (5-2=3)."
+  },
+  {
+    "question": "How can you achieve runtime polymorphism in Java?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "method overloading"
+      },
+      {
+        "key": "B",
+        "text": "method overrunning"
+      },
+      {
+        "key": "C",
+        "text": "method overriding"
+      },
+      {
+        "key": "D",
+        "text": "method calling"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Given the following definitions, which of these expressions will **NOT** evaluate to true?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** i2 && b1 are not allowed between int and boolean."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** array.size() is invalid, to get the size or length of the array array.length can be used."
+  },
+  {
+    "question": "Which of the following can replace the CODE SNIPPET to make the code below print \"Hello World\"?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What does the following code print?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** You should assign the result of trim back to the String variable. Otherwise, it is not going to work, because strings in Java are immutable."
+  },
+  {
+    "question": "What is the result of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which class can compile given these declarations?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Given the following two classes, what will be the output of the Main class?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** The answer is \"123\". The `abs()` method evaluates to the one inside mypackage.Math class, because the import statements of the form: `import packageName.subPackage.*` is [Type-Import-on-Demand Declarations](https://docs.oracle.com/javase/specs/jls/se7/html/jls-7.html#jls-7.5.2), which [never causes any other declaration to be shadowed](https://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.4.1)."
+  },
+  {
+    "question": "What is the result of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** Compilation error at line 10 because of final methods cannot be overridden, and here message() is a final method, and also note that Non-static method message() cannot be referenced from a static context."
+  },
+  {
+    "question": "Given this code, which command will output \"2\"?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** The int type in Java can be used to represent any whole number from -2147483648 to 2147483647. Therefore, this code will not compile as the number assigned to 'a' is larger than the int type can hold."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How do you write a for-each loop that will iterate over ArrayList\\<Pencil\\>pencilCase?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`for (Pencil pencil : pencilCase) {}`"
+      },
+      {
+        "key": "B",
+        "text": "`for (pencilCase.next()) {}`"
+      },
+      {
+        "key": "C",
+        "text": "`for (Pencil pencil : pencilCase.iterator()) {}`"
+      },
+      {
+        "key": "D",
+        "text": "`for (pencil in pencilCase) {}`"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What does this code print?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "You have an ArrayList of names that you want to sort alphabetically. Which approach would **NOT** work?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`names.sort(Comparator.comparing(String::toString))`"
+      },
+      {
+        "key": "B",
+        "text": "`Collections.sort(names)`"
+      },
+      {
+        "key": "C",
+        "text": "`names.sort(List.DESCENDING)`"
+      },
+      {
+        "key": "D",
+        "text": "`names.stream().sorted((s1, s2) -> s1.compareTo(s2)).collect(Collectors.toList())`"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "By implementing encapsulation, you cannot directly access the class's \\_ properties unless you are writing code inside the class itself.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "private"
+      },
+      {
+        "key": "B",
+        "text": "protected"
+      },
+      {
+        "key": "C",
+        "text": "no-modifier"
+      },
+      {
+        "key": "D",
+        "text": "public"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which is the most up-to-date way to instantiate the current date?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`new SimpleDateFormat(\"yyyy-MM-dd\").format(new Date())`"
+      },
+      {
+        "key": "B",
+        "text": "`new Date(System.currentTimeMillis())`"
+      },
+      {
+        "key": "C",
+        "text": "`LocalDate.now()`"
+      },
+      {
+        "key": "D",
+        "text": "`Calendar.getInstance().getTime()`"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "** LocalDate is the newest class added in Java 8"
+  },
+  {
+    "question": "Fill in the blank to create a piece of code that will tell whether `int0` is divisible by `5`:",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How many times will this code print \"Hello World!\"?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** Observe the loop increment. It's not an increment, it's an assignment(post)."
+  },
+  {
+    "question": "The runtime system starts your program by calling which function first?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "print"
+      },
+      {
+        "key": "B",
+        "text": "iterative"
+      },
+      {
+        "key": "C",
+        "text": "hello"
+      },
+      {
+        "key": "D",
+        "text": "main"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What code would you use in Constructor A to call Constructor B?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "\"An anonymous class requires a zero-argument constructor.\" that's not true?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "An anonymous class may specify an abstract base class as its base type."
+      },
+      {
+        "key": "B",
+        "text": "An anonymous class does not require a zero-argument constructor."
+      },
+      {
+        "key": "C",
+        "text": "An anonymous class may specify an interface as its base type."
+      },
+      {
+        "key": "D",
+        "text": "An anonymous class may specify both an abstract class and interface as base types."
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will this program print out to the console when executed?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Object-oriented programming is a style of programming where you organize your program around \\_ and data, rather than \\_ and logic.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "functions; actions"
+      },
+      {
+        "key": "B",
+        "text": "objects; actions"
+      },
+      {
+        "key": "C",
+        "text": "actions; functions"
+      },
+      {
+        "key": "D",
+        "text": "actions; objects"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What statement returns true if \"nifty\" is of type String?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`\"nifty\".getType().equals(\"String\")`"
+      },
+      {
+        "key": "B",
+        "text": "`\"nifty\".getType() == String`"
+      },
+      {
+        "key": "C",
+        "text": "`\"nifty\".getClass().getSimpleName() == \"String\"`"
+      },
+      {
+        "key": "D",
+        "text": "`\"nifty\" instanceof String`"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the result of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What method can be used to create a new instance of an object?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "another instance"
+      },
+      {
+        "key": "B",
+        "text": "field"
+      },
+      {
+        "key": "C",
+        "text": "constructor"
+      },
+      {
+        "key": "D",
+        "text": "private method"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which is the most reliable expression for testing whether the values of two string variables are the same?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "string1 == string2"
+      },
+      {
+        "key": "B",
+        "text": "string1 = string2"
+      },
+      {
+        "key": "C",
+        "text": "string1.matches(string2)"
+      },
+      {
+        "key": "D",
+        "text": "string1.equals(string2)"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which letters will print when this code is run?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** `Error` is not inherited from `Exception`."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** The `java.util.Arrays.asList(T... a)` returns a fixed-size list backed by the specified array. (Changes to the returned list \"write through\" to the array.)"
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is displayed when this code is compiled and executed?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which approach cannot be used to iterate over a List named _theList_?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "A"
+      }
+    ],
+    "answer": [],
+    "explanation": "** `for (it.hasNext())` should be `while (it.hasNext())`."
+  },
+  {
+    "question": "What method signature will work with this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which are valid keywords in a Java module descriptor (module-info.java)?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "provides, employs"
+      },
+      {
+        "key": "B",
+        "text": "imports, exports"
+      },
+      {
+        "key": "C",
+        "text": "consumes, supplies"
+      },
+      {
+        "key": "D",
+        "text": "requires, exports"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which type of variable keeps a constant value once it is assigned?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "non-static"
+      },
+      {
+        "key": "B",
+        "text": "static"
+      },
+      {
+        "key": "C",
+        "text": "final"
+      },
+      {
+        "key": "D",
+        "text": "private"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How does the keyword `volatile` affect how a variable is handled?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "It will be read by only one thread at a time."
+      },
+      {
+        "key": "B",
+        "text": "It will be stored on the hard drive."
+      },
+      {
+        "key": "C",
+        "text": "It will never be cached by the CPU."
+      },
+      {
+        "key": "D",
+        "text": "It will be preferentially garbage collected."
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the result of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "You get a NullPointerException. What is the most likely cause?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "A file that needs to be opened cannot be found."
+      },
+      {
+        "key": "B",
+        "text": "A network connection has been lost in the middle of communications."
+      },
+      {
+        "key": "C",
+        "text": "Your code has used up all available memory."
+      },
+      {
+        "key": "D",
+        "text": "The object you are using has not been instantiated."
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How would you fix this code so that it compiles?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Add a Duck called \"Waddles\" to the ArrayList **ducks**.",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "If you encounter `UnsupportedClassVersionError` it means the code was `___` on a newer version of Java than the JRE `___` it.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "executed; interpreting"
+      },
+      {
+        "key": "B",
+        "text": "executed; compiling"
+      },
+      {
+        "key": "C",
+        "text": "compiled; executing"
+      },
+      {
+        "key": "D",
+        "text": "compiled, translating"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Given this class, how would you make the code compile?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** `final` class members are allowed to be assigned only in three places: declaration, constructor, or an instance-initializer block."
+  },
+  {
+    "question": "How many times f will be printed?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which statements about `abstract` classes are true?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which keyword lets you call the constructor of a parent class?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "parent"
+      },
+      {
+        "key": "B",
+        "text": "super"
+      },
+      {
+        "key": "C",
+        "text": "this"
+      },
+      {
+        "key": "D",
+        "text": "new"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the result of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Normally, to access a static member of a class such as Math.PI, you would need to specify the class \"Math\". What would be the best way to allow you to use simply \"PI\" in your code?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Add a static import."
+      },
+      {
+        "key": "B",
+        "text": "Declare local copies of the constant in your code."
+      },
+      {
+        "key": "C",
+        "text": "This cannot be done. You must always qualify references to static members with the class from which they came from."
+      },
+      {
+        "key": "D",
+        "text": "Put the static members in an interface and inherit from that interface."
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which keyword lets you use an interface?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "extends"
+      },
+      {
+        "key": "B",
+        "text": "implements"
+      },
+      {
+        "key": "C",
+        "text": "inherits"
+      },
+      {
+        "key": "D",
+        "text": "Import"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Why are ArrayLists better than arrays?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "You don't have to decide the size of an ArrayList when you first make it."
+      },
+      {
+        "key": "B",
+        "text": "You can put more items into an ArrayList than into an array."
+      },
+      {
+        "key": "C",
+        "text": "ArrayLists can hold more kinds of objects than arrays."
+      },
+      {
+        "key": "D",
+        "text": "You don't have to decide the type of an ArrayList when you first make it."
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Declare a variable that holds the first four digits of Π",
+    "choices": [
+      {
+        "key": "A",
+        "text": "int pi = 3.141;"
+      },
+      {
+        "key": "B",
+        "text": "decimal pi = 3.141;"
+      },
+      {
+        "key": "C",
+        "text": "double pi = 3.141;"
+      },
+      {
+        "key": "D",
+        "text": "float pi = 3.141;"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "** ```java public class TestReal { public static void main (String[] argv) { double pi = 3.14159265;       //accuracy up to 15 digits float pi2 = 3.141F;           //accuracy up to 6-7 digits System.out.println (\"Pi=\" + pi); System.out.println (\"Pi2=\" + pi2); } } ``` ``` The default Java type which Java will be used for a float variable will be double. So, even if you declare any variable as float, what the compiler has to do is assign a double value to a float variable, which is not possible. So, to tell the compiler to treat this value as a float, that 'F' is used. ```"
+  },
+  {
+    "question": "Use the magic power to cast a spell",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What language construct serves as a blueprint containing an object's properties and functionality?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "constructor"
+      },
+      {
+        "key": "B",
+        "text": "instance"
+      },
+      {
+        "key": "C",
+        "text": "class"
+      },
+      {
+        "key": "D",
+        "text": "method"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What does this code print?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the result of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which is not a Java keyword",
+    "choices": [
+      {
+        "key": "A",
+        "text": "finally"
+      },
+      {
+        "key": "B",
+        "text": "native"
+      },
+      {
+        "key": "C",
+        "text": "interface"
+      },
+      {
+        "key": "D",
+        "text": "unsigned"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "** `native` is a part of the JNI interface."
+  },
+  {
+    "question": "Which operator would you use to find the remainder after division?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`%`"
+      },
+      {
+        "key": "B",
+        "text": "`//`"
+      },
+      {
+        "key": "C",
+        "text": "`/`"
+      },
+      {
+        "key": "D",
+        "text": "`DIV`"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which choice is a disadvantage of inheritance?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Overridden methods of the parent class cannot be reused."
+      },
+      {
+        "key": "B",
+        "text": "Responsibilities are not evenly distributed between parent and child classes."
+      },
+      {
+        "key": "C",
+        "text": "Classes related by inheritance are tightly coupled to each other."
+      },
+      {
+        "key": "D",
+        "text": "The internal state of the parent class is accessible to its children."
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How would you declare and initialize an array of 10 ints?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`Array<Integer> numbers = new Array<Integer>(10);`"
+      },
+      {
+        "key": "B",
+        "text": "`Array[int] numbers = new Array[int](10);`"
+      },
+      {
+        "key": "C",
+        "text": "`int[] numbers = new int[10];`"
+      },
+      {
+        "key": "D",
+        "text": "`int numbers[] = int[10];`"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Refactor this event handler to a lambda expression:",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which functional interfaces does Java provide to serve as data types for lambda expressions?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Observer, Observable"
+      },
+      {
+        "key": "B",
+        "text": "Collector, Builder"
+      },
+      {
+        "key": "C",
+        "text": "Filter, Map, Reduce"
+      },
+      {
+        "key": "D",
+        "text": "Consumer, Predicate, Supplier"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is a valid use of the hashCode() method?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "encrypting user passwords"
+      },
+      {
+        "key": "B",
+        "text": "deciding if two instances of a class are equal"
+      },
+      {
+        "key": "C",
+        "text": "enabling HashMap to find matches faster"
+      },
+      {
+        "key": "D",
+        "text": "moving objects from a List to a HashMap"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What kind of relationship does \"extends\" denote?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "uses-a"
+      },
+      {
+        "key": "B",
+        "text": "is-a"
+      },
+      {
+        "key": "C",
+        "text": "has-a"
+      },
+      {
+        "key": "D",
+        "text": "was-a"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How do you force an object to be garbage collected?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Set object to null and call Runtime.gc()"
+      },
+      {
+        "key": "B",
+        "text": "Set object to null and call System.gc()"
+      },
+      {
+        "key": "C",
+        "text": "Set object to null and call Runtime.getRuntime().runFinalization()"
+      },
+      {
+        "key": "D",
+        "text": "There is no way to force an object to be garbage-collected"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Java programmers commonly use design patterns. Some examples are the **\\_**, which helps create instances of a class, the **\\_**, which ensures that only one instance of a class can be created; and the **\\_**, which allows for a group of algorithms to be interchangeable.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "static factory method; singleton; strategy pattern"
+      },
+      {
+        "key": "B",
+        "text": "strategy pattern; static factory method; singleton"
+      },
+      {
+        "key": "C",
+        "text": "creation pattern; singleton; prototype pattern"
+      },
+      {
+        "key": "D",
+        "text": "singleton; strategy pattern; static factory method"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Using Java's Reflection API, you can use \\_ to get the name of a class and \\_ to retrieve an array of its methods.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "this.getClass().getSimpleName(); this.getClass().getDeclaredMethods()"
+      },
+      {
+        "key": "B",
+        "text": "this.getName(); this.getMethods()"
+      },
+      {
+        "key": "C",
+        "text": "Reflection.getName(this); Reflection.getMethods(this)"
+      },
+      {
+        "key": "D",
+        "text": "Reflection.getClass(this).getName(); Reflection.getClass(this).getMethods()"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which is not a valid lambda expression?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`a -> false;`"
+      },
+      {
+        "key": "B",
+        "text": "`(a) -> false;`"
+      },
+      {
+        "key": "C",
+        "text": "`String a -> false;`"
+      },
+      {
+        "key": "D",
+        "text": "`(String a) -> false;`"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which access modifier makes variables and methods visible only in the class where they are declared?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "public"
+      },
+      {
+        "key": "B",
+        "text": "protected"
+      },
+      {
+        "key": "C",
+        "text": "nonmodifier"
+      },
+      {
+        "key": "D",
+        "text": "private"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What type of variable can be assigned only once?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "private"
+      },
+      {
+        "key": "B",
+        "text": "non-static"
+      },
+      {
+        "key": "C",
+        "text": "final"
+      },
+      {
+        "key": "D",
+        "text": "static"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How would you convert a String to an Int?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`\"21\".intValue()`"
+      },
+      {
+        "key": "B",
+        "text": "`String.toInt(\"21\")`"
+      },
+      {
+        "key": "C",
+        "text": "`Integer.parseInt(\"21\")`"
+      },
+      {
+        "key": "D",
+        "text": "`String.valueOf(\"21\")`"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What method should be added to the Duck class to print the name Moby?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which operator is used to concatenate Strings in Java",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`+`"
+      },
+      {
+        "key": "B",
+        "text": "`&`"
+      },
+      {
+        "key": "C",
+        "text": "`.`"
+      },
+      {
+        "key": "D",
+        "text": "`-`"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How many times does this loop print \"exterminate\"?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the value of myCharacter after line 3 is run?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "When should you use a static method?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "when your method is related to the object's characteristics"
+      },
+      {
+        "key": "B",
+        "text": "when you want your method to be available independently of class instances"
+      },
+      {
+        "key": "C",
+        "text": "when your method uses an object's instance variable"
+      },
+      {
+        "key": "D",
+        "text": "when your method is dependent on the specific instance that calls it"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What phrase indicates that a function receives a copy of each argument passed to it rather than a reference to the objects themselves?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "pass by reference"
+      },
+      {
+        "key": "B",
+        "text": "pass by occurrence"
+      },
+      {
+        "key": "C",
+        "text": "pass by value"
+      },
+      {
+        "key": "D",
+        "text": "API call"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "In Java, what is the scope of a method's argument or parameter?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "inside the method"
+      },
+      {
+        "key": "B",
+        "text": "both inside and outside the method"
+      },
+      {
+        "key": "C",
+        "text": "neither inside nor outside the method"
+      },
+      {
+        "key": "D",
+        "text": "outside the method"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which change will make this code compile successfully?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** Changing line 2 to `public static final String message` raises the error `message not initialized in the default constructor`."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which code snippet is valid?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`ArrayList<String> words = new ArrayList<String>(){\"Hello\", \"World\"};`"
+      },
+      {
+        "key": "B",
+        "text": "`ArrayList words = Arrays.asList(\"Hello\", \"World\");`"
+      },
+      {
+        "key": "C",
+        "text": "`ArrayList<String> words = {\"Hello\", \"World\"};`"
+      },
+      {
+        "key": "D",
+        "text": "`ArrayList<String> words = new ArrayList<>(Arrays.asList(\"Hello\", \"World\"));`"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How would you use the TaxCalculator to determine the amount of tax on $50?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which characteristic does not apply to instances of java.util.HashSet?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "uses hashcode of objects when inserted"
+      },
+      {
+        "key": "B",
+        "text": "contains unordred elements"
+      },
+      {
+        "key": "C",
+        "text": "contains unique elements"
+      },
+      {
+        "key": "D",
+        "text": "contains sorted elements"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "** HashSet makes no guarantees as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over time."
+  },
+  {
+    "question": "What is the output?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will this code print, assuming it is inside the main method of a class?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "You have an instance of type Map<String, Integer> named instruments containing the following key-value pairs: guitar=1200, cello=3000, and drum=2000. If you add the new key-value pair cello=4500 to the Map using the put method, how many elements do you have in the Map when you call instruments.size()?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "When calling the put method, Java will throw an exception"
+      },
+      {
+        "key": "C",
+        "text": "4"
+      },
+      {
+        "key": "D",
+        "text": "3"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which class acts as the root class for the Java Exception hierarchy?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Clonable"
+      },
+      {
+        "key": "B",
+        "text": "Throwable"
+      },
+      {
+        "key": "C",
+        "text": "Object"
+      },
+      {
+        "key": "D",
+        "text": "Serializable"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which class does not implement the java.util.Collection interface?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "java.util.Vector"
+      },
+      {
+        "key": "B",
+        "text": "java.util.ArrayList"
+      },
+      {
+        "key": "C",
+        "text": "java.util.HashSet"
+      },
+      {
+        "key": "D",
+        "text": "java.util.HashMap"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "** HashMap class implements Map interface."
+  },
+  {
+    "question": "You have a variable of named `employees` of type `List<Employee>` containing multiple entries. The `Employee` type has a method `getName()` that returns the employee name. Which statement properly extracts a list of employee names?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`employees.collect(employee -> employee.getName());`"
+      },
+      {
+        "key": "B",
+        "text": "`employees.filter(Employee::getName).collect(Collectors.toUnmodifiableList());`"
+      },
+      {
+        "key": "C",
+        "text": "`employees.stream().map(Employee::getName).collect(Collectors.toList());`"
+      },
+      {
+        "key": "D",
+        "text": "`employees.stream().collect((e) -> e.getName());`"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "This code does not compile. What needs to be changed so that it does?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which language feature ensures that objects implementing the `AutoCloseable` interface are closed when it completes?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "try-catch-finally"
+      },
+      {
+        "key": "B",
+        "text": "try-finally-close"
+      },
+      {
+        "key": "C",
+        "text": "try-with-resources"
+      },
+      {
+        "key": "D",
+        "text": "try-catch-close"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What code should go in line 3?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Is this an example of method overloading or overriding?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which choice is the best data type for working with money in Java?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "float"
+      },
+      {
+        "key": "B",
+        "text": "String"
+      },
+      {
+        "key": "C",
+        "text": "double"
+      },
+      {
+        "key": "D",
+        "text": "BigDecimal"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which statement about constructors is not true?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "A class can have multiple constructors with a different parameter list."
+      },
+      {
+        "key": "B",
+        "text": "You can call another constructor with `this` or `super`."
+      },
+      {
+        "key": "C",
+        "text": "A constructor does not define a return value."
+      },
+      {
+        "key": "D",
+        "text": "Every class must explicitly define a constructor without parameters."
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What language feature allows types to be parameters on classes, interfaces, and methods in order to reuse the same code for different data types?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Regular Expressions"
+      },
+      {
+        "key": "B",
+        "text": "Reflection"
+      },
+      {
+        "key": "C",
+        "text": "Generics"
+      },
+      {
+        "key": "D",
+        "text": "Concurrency"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will be printed?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the value of `forestCount` after this code executes?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the problem with this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How do you convert this method into a lambda expression?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which choice is a valid implementation of this interface?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the result of this program?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which statement must be inserted on line 1 to print the value true?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will this code print, assuming it is inside the main method of a class?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will this code print?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which code checks whether the characters in two Strings,named `time` and `money`, are the same?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`if(time <> money){}`"
+      },
+      {
+        "key": "B",
+        "text": "`if(time.equals(money)){}`"
+      },
+      {
+        "key": "C",
+        "text": "`if(time == money){}`"
+      },
+      {
+        "key": "D",
+        "text": "`if(time = money){}`"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "An **\\_** is a serious issue thrown by the JVM that the JVM is unlikely to recover from. An **\\_** is an unexpected event that an application may be able to deal with to continue execution.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "exception,assertion"
+      },
+      {
+        "key": "B",
+        "text": "AbnormalException, AccidentalException"
+      },
+      {
+        "key": "C",
+        "text": "error, exception"
+      },
+      {
+        "key": "D",
+        "text": "exception, error"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which keyword would not be allowed here?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which OOP concept is this code an example of?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** Switch between different implementations of the `List` interface."
+  },
+  {
+    "question": "What does this code print?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** `== operator` compares the object reference. `String a = \"bikini\"; String b = \"bikini\";` would result in True. Here new creates a new object, so false. Use `equals() method` to compare the content."
+  },
+  {
+    "question": "What keyword is added to a method declaration to ensure that two threads do not simultaneously execute it on the same object instance?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "native"
+      },
+      {
+        "key": "B",
+        "text": "volatile"
+      },
+      {
+        "key": "C",
+        "text": "synchronized"
+      },
+      {
+        "key": "D",
+        "text": "lock"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which is a valid type for this lambda function?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is displayed when this code is compiled and executed?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What variable type should be declared for capitalization?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which is the correct return type for the processFunction method?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What function could you use to replace slashes for dashes in a list of dates?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** `replaceAll` method for any List<T> only accepts UnaryOperator<T> to pass every single element into it then put the result into the List<T> again."
+  },
+  {
+    "question": "From which class do all other classes implicitly extend?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "`Object`"
+      },
+      {
+        "key": "B",
+        "text": "`Main`"
+      },
+      {
+        "key": "C",
+        "text": "`Java`"
+      },
+      {
+        "key": "D",
+        "text": "`Class`"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How do you create and run a Thread for this class?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which expression is a functional equivalent?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** The given code in the question will give you the output 20 as total: ```java numbers                         // Input `List<Integer>` > [1, 2, 3, 4] .stream()                   // Converts input into `Stream<Integer>` .filter(x -> x % 2 == 0)    // Filter even numbers and return `Stream<Integer>` > [2, 4] .mapToInt(x -> x * x)       // Square the number, converts `Integer` to an `int`, and returns `IntStream` > [4, 16] .sum()                      // Returns the sum as `int` > 20 ```"
+  },
+  {
+    "question": "Which is not one of the standard input/output streams provided by java.lang.System?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "print"
+      },
+      {
+        "key": "B",
+        "text": "out"
+      },
+      {
+        "key": "C",
+        "text": "err"
+      },
+      {
+        "key": "D",
+        "text": "in"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "The compiler is complaining about this assignment of the variable pickle to the variable jar. How would you fix this?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What value should x have to make this loop execute 10 times?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "The **\\_** runs compiled Java code, while the **\\_** compiles Java files.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "IDE; JRE"
+      },
+      {
+        "key": "B",
+        "text": "JDK; IDE"
+      },
+      {
+        "key": "C",
+        "text": "JRE; JDK"
+      },
+      {
+        "key": "D",
+        "text": "JDK; JRE"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which packages are part of Java Standard Edition",
+    "choices": [
+      {
+        "key": "A",
+        "text": "java.net"
+      },
+      {
+        "key": "B",
+        "text": "java.util"
+      },
+      {
+        "key": "C",
+        "text": "java.lang"
+      },
+      {
+        "key": "D",
+        "text": "All above"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What values for x and y will cause this code to print \"btc\"?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which keyword would you add to make this method the entry point of the program?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "You have a list of Bunny objects that you want to sort by weight using Collections.sort. What modification would you make to the Bunny class?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Identify the incorrect Java feature.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Object-oriented"
+      },
+      {
+        "key": "B",
+        "text": "Use of pointers"
+      },
+      {
+        "key": "C",
+        "text": "Dynamic"
+      },
+      {
+        "key": "D",
+        "text": "Architectural neural"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the output of this code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What language features do these expressions demonstrate?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the difference between the wait() and sleep() methods?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Only Threads can wait, but any Object can be put to sleep."
+      },
+      {
+        "key": "B",
+        "text": "A waiter can be woken up by another Thread calling notification whereas a sleeper cannot."
+      },
+      {
+        "key": "C",
+        "text": "When things go wrong, sleep throws an IllegalMonitorStateException whereas wait throws an InterruptedException."
+      },
+      {
+        "key": "D",
+        "text": "Sleep allows for multi-threading whereas wait does not."
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which is the right way to declare an enumeration of cats?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "enum Cats (SPHYNX, SIAMESE, BENGAL);"
+      },
+      {
+        "key": "B",
+        "text": "enum Cats (\"sphynx\", \"siamese\", \"bengal\");"
+      },
+      {
+        "key": "C",
+        "text": "enum Cats {SPHYNX, SIAMESE, BENGAL}"
+      },
+      {
+        "key": "D",
+        "text": "enum Cats {\"sphynx\",\"siamese\",\"bengal}"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What happens when this code is run?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which data structure would you choose to associate the amount of rainfall with each month?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Vector"
+      },
+      {
+        "key": "B",
+        "text": "LinkedList"
+      },
+      {
+        "key": "C",
+        "text": "Map"
+      },
+      {
+        "key": "D",
+        "text": "Queue"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "** > from @yktsang01 in #3915 thread Map because the map is a key/value pair without creating new classes/objects. So can store the rainfall per month like `Map<java.time.Month, Double>`. The other options will most likely need some new class to be meaningful: ```java public class Rainfall { private java.time.Month month; private double rainfall; } Vector<Rainfall> LinkedList<Rainfall> Queue<Rainfall> ```"
+  },
+  {
+    "question": "Among the following which contains date information?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "java.sql timestamp"
+      },
+      {
+        "key": "B",
+        "text": "java.io time"
+      },
+      {
+        "key": "C",
+        "text": "java.io.timestamp"
+      },
+      {
+        "key": "D",
+        "text": "java.sql.time"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the size of float and double in Java?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "32 and 64"
+      },
+      {
+        "key": "B",
+        "text": "32 and 32"
+      },
+      {
+        "key": "C",
+        "text": "64 and 64"
+      },
+      {
+        "key": "D",
+        "text": "64 and 32"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "When you pass an object reference as an argument to a method call what gets passed?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "a reference to a copy"
+      },
+      {
+        "key": "B",
+        "text": "a copy of the reference"
+      },
+      {
+        "key": "C",
+        "text": "the object itself"
+      },
+      {
+        "key": "D",
+        "text": "the original reference"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which choice demonstrates a valid way to create a reference to a static function of another class?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Function<Integer, Integer> funcReference = MyClass::myFunction;"
+      },
+      {
+        "key": "B",
+        "text": "Function<Integer, Integer> funcReference = MyClass()::myFunction();"
+      },
+      {
+        "key": "C",
+        "text": "Function<Integer, Integer> funcReference = MyClass().myFunction;"
+      },
+      {
+        "key": "D",
+        "text": "Function<Integer, Integer> funcReference = MyClass.myFunction();"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is UNICODE?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Unicode is used for the external representation of words and strings"
+      },
+      {
+        "key": "B",
+        "text": "Unicode is used for internal representation of characters and strings"
+      },
+      {
+        "key": "C",
+        "text": "Unicode is used for external representation of characters and strings"
+      },
+      {
+        "key": "D",
+        "text": "Unicode is used for the internal representation of words and strings"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What kind of thread is the Garbage collector thread?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "User thread"
+      },
+      {
+        "key": "B",
+        "text": "Daemon thread"
+      },
+      {
+        "key": "C",
+        "text": "Both"
+      },
+      {
+        "key": "D",
+        "text": "None of these"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is HashMap and Map?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "HashMap is Interface and map is a class that implements that"
+      },
+      {
+        "key": "B",
+        "text": "HashMap is a class and map is an interface that implements that"
+      },
+      {
+        "key": "C",
+        "text": "Map is a class and Hashmap is an interface that implements that"
+      },
+      {
+        "key": "D",
+        "text": "Map is Interface and Hashmap is the class that implements that"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What invokes a thread's run() method?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "JVM invokes the thread's run() method when the thread is initially executed."
+      },
+      {
+        "key": "B",
+        "text": "Main application running the thread."
+      },
+      {
+        "key": "C",
+        "text": "start() method of the thread class."
+      },
+      {
+        "key": "D",
+        "text": "None of the above."
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "** After a thread is started, via its `start()` method of the Thread class, the JVM invokes the thread's `run()` method when the thread is initially executed."
+  },
+  {
+    "question": "What is true about a final class?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "class declared final is a final class."
+      },
+      {
+        "key": "B",
+        "text": "Final classes are created so the methods implemented by that class cannot be overridden."
+      },
+      {
+        "key": "C",
+        "text": "It can't be inherited."
+      },
+      {
+        "key": "D",
+        "text": "All of the above."
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "** Final classes are created so the methods implemented by that class cannot be overridden. It can't be inherited. These classes are declared `final`."
+  },
+  {
+    "question": "Which method can be used to find the highest value of x and y?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Math.largest(x,y)"
+      },
+      {
+        "key": "B",
+        "text": "Math.maxNum(x,y)"
+      },
+      {
+        "key": "C",
+        "text": "Math.max(x,y)"
+      },
+      {
+        "key": "D",
+        "text": "Math.maximum(x,y)"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "`void accept(T t)` is method of which Java functional interface?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Consumer"
+      },
+      {
+        "key": "B",
+        "text": "Producer"
+      },
+      {
+        "key": "C",
+        "text": "Both"
+      },
+      {
+        "key": "D",
+        "text": "None"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which of these does `Stream filter()` operate on?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Predicate"
+      },
+      {
+        "key": "B",
+        "text": "Interface"
+      },
+      {
+        "key": "C",
+        "text": "Class"
+      },
+      {
+        "key": "D",
+        "text": "Methods"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which of these does `Stream map()` operates on?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Class"
+      },
+      {
+        "key": "B",
+        "text": "Interface"
+      },
+      {
+        "key": "C",
+        "text": "Predicate"
+      },
+      {
+        "key": "D",
+        "text": "Function"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What code is needed at line 8?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will print when Lambo is instantiated?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What is the default value of a short variable?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "0"
+      },
+      {
+        "key": "B",
+        "text": "0.0"
+      },
+      {
+        "key": "C",
+        "text": "null"
+      },
+      {
+        "key": "D",
+        "text": "undefined"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will be the output of the following Java program?",
+    "choices": [],
+    "answer": [],
+    "explanation": "** Scope of variable Y is limited."
+  },
+  {
+    "question": "Subclasses of an abstract class are created using the keyword **\\_**.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "extends"
+      },
+      {
+        "key": "B",
+        "text": "abstracts"
+      },
+      {
+        "key": "C",
+        "text": "interfaces"
+      },
+      {
+        "key": "D",
+        "text": "implements"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will be the output of the following program?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Calculate the time complexity of the following program.",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What do these expressions evaluate?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What allows the programmer to destroy an object x?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "1. x.delete()"
+      },
+      {
+        "key": "B",
+        "text": "2. x.finalize()"
+      },
+      {
+        "key": "C",
+        "text": "3. Runtime.getRuntime().gc()"
+      },
+      {
+        "key": "D",
+        "text": "4. Only the garbage collection system can destroy an object."
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "How many objects are eligible for garbage collection till flag",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which interface definition allows this code to compile",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which of the following represents the time complexity of an algorithm?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "O(N\\*N)"
+      },
+      {
+        "key": "B",
+        "text": "O(1)"
+      },
+      {
+        "key": "C",
+        "text": "O(A+B)"
+      },
+      {
+        "key": "D",
+        "text": "O(A\\*B)"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "** The answer option 'O(AB)' should be corrected to 'O(A\\*B)' to accurately represent the time complexity. - O(N\\*N): This represents a quadratic time complexity, where the running time grows with the square of the input size. - O(1): This represents constant time complexity, indicating that the algorithm's running time doesn't depend on the input size. - O(A+B): This represents linear time complexity, indicating that the running time scales linearly with the sum of values A and B. - O(A\\*B): This represents quadratic time complexity, indicating that the running time scales quadratically with the product of values A and B. `The original answer option 'O(AB)' is incorrect as it does not properly represent a known time complexity notation. The correct notation should be 'O(A*B)' to indicate quadratic time complexity.`"
+  },
+  {
+    "question": "Calculate the space complexity of the following program.",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will be the output of the following Java code?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "In Java, what is the purpose of the synchronized keyword when used in the context of methods or code blocks?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "It is used to specify that a method or code block is asynchronous, allowing multiple threads to execute it concurrently."
+      },
+      {
+        "key": "B",
+        "text": "It is used to mark a method or code block as thread-safe, ensuring that only one thread can execute it at a time."
+      },
+      {
+        "key": "C",
+        "text": "It indicates that the method or code block is highly optimized for performance and will run faster than non-synchronized methods."
+      },
+      {
+        "key": "D",
+        "text": "It is used to prevent a method or code block from being executed by any thread, making it effectively \"locked.\""
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "In Java, which of the following statements about the \"transient\" modifier is true?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Transient variables cannot be accessed outside their declaring class."
+      },
+      {
+        "key": "B",
+        "text": "Transient variables are automatically initialized with a default value."
+      },
+      {
+        "key": "C",
+        "text": "Transient variables are not serialized when an object is serialized."
+      },
+      {
+        "key": "D",
+        "text": "Transient is a keyword used to define inner classes."
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "The following prototype shows that a Cylinder subclass is derived from a superclass called Circle.",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Class Circle extends Cylinder."
+      },
+      {
+        "key": "B",
+        "text": "Class Cylinder derived Circle."
+      },
+      {
+        "key": "C",
+        "text": "Class Cylinder extends Circle."
+      },
+      {
+        "key": "D",
+        "text": "Class Circle derived Cylinder."
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What will be the output of the following Java code snippet?",
+    "choices": [],
+    "answer": [],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "Which of these classes allows us to define our own formatting pattern for dates and times?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "DefinedDateFormat"
+      },
+      {
+        "key": "B",
+        "text": "SimpleDateFormat"
+      },
+      {
+        "key": "C",
+        "text": "ComplexDateFormat"
+      },
+      {
+        "key": "D",
+        "text": "UsersDateFormatRead"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  },
+  {
+    "question": "What kind of relationship does extends denote?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "is-a"
+      },
+      {
+        "key": "B",
+        "text": "has-a"
+      },
+      {
+        "key": "C",
+        "text": "was-a"
+      },
+      {
+        "key": "D",
+        "text": "uses-a"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "Go google or AI for the explanation bro."
+  }
+]

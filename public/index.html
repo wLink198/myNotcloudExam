@@ -631,6 +631,11 @@
         // Helper: wrap long lines at ~100 chars, prefer at space
         function wrapLongLine(line, maxLen = 100) {
             if (line.length <= maxLen) return line;
+            if (line.includes(';') || line.includes('()') || line.includes('=') || 
+                line.match(/\w+\.\w+/) || line.includes('System.out')) {
+                return line;
+            }
+            
             let out = '';
             let cur = 0;
             while (cur < line.length) {
@@ -639,7 +644,6 @@
                     out += line.slice(cur);
                     break;
                 }
-                // Try to break at space before maxLen
                 let spaceIdx = line.lastIndexOf(' ', next);
                 if (spaceIdx <= cur) spaceIdx = next;
                 out += line.slice(cur, spaceIdx) + '<br>';
@@ -650,11 +654,54 @@
 
         // Detect and format Java code in question text, with smart line breaks
         function prettyQuestion(text) {
+            console.log('Formatting question text:', text);
             let lines = text.split('\n');
             let result = [];
             let codeLines = [];
             let inCodeBlock = false;
             let openBraces = 0;
+
+            // Tìm vị trí dòng có dấu ?
+            let questionMarkIdx = -1;
+            for (let i = 0; i < lines.length; ++i) {
+                if (lines[i].trim().includes('?')) {
+                    questionMarkIdx = i;
+                    break;
+                }
+            }
+
+            // Sau dấu ?: bỏ qua các dòng mô tả, dòng đầu tiên không phải mô tả sẽ là code
+            let fallbackCodeIdx = -1;
+            if (questionMarkIdx !== -1) {
+                let i = questionMarkIdx + 1;
+                let descLines = [];
+                let foundDesc = false;
+                while (i < lines.length) {
+                    console.log('Checking line:', lines[i]);
+                    let trimmed = lines[i].trim();
+                    if (trimmed === '') {
+                        i++;
+                        continue;
+                    }
+                    console.log('Trimmed line:', trimmed);
+                    descLines.push(trimmed);
+                    let descText = descLines.join(' ');
+                    console.log('Checking description line:', descText);
+                    // Nếu đã tìm thấy pattern mô tả, dừng lại, dòng tiếp theo là code
+                    if (/that apply\.\)?$/i.test(descText)) {
+                        foundDesc = true;
+                        i++;
+                        fallbackCodeIdx = i;
+                        break;
+                    }
+                    i++;
+                }
+                // Nếu không tìm thấy mô tả, coi tất cả các dòng sau dấu ? là code
+                if (!foundDesc) {
+                    fallbackCodeIdx = questionMarkIdx + 1;
+                }
+            }
+
             for (let i = 0; i < lines.length; ++i) {
                 let line = lines[i];
                 let trimmed = line.trim();
@@ -666,11 +713,9 @@
                     continue;
                 }
                 if (inCodeBlock) {
-                    // Đếm số lượng mở/đóng ngoặc để xác định kết thúc block
                     openBraces += (line.match(/{/g) || []).length;
                     openBraces -= (line.match(/}/g) || []).length;
                     codeLines.push(line);
-                    // Nếu đã đóng hết ngoặc thì kết thúc code block
                     if (openBraces <= 0) {
                         result.push('<pre><code class="language-java">' +
                             codeLines.map(l =>
@@ -682,14 +727,18 @@
                     }
                     continue;
                 }
-                // Ngoài code block, xử lý như văn bản thường
+                // Fallback: Nếu là dòng code sau dấu ? (và không phải dòng mô tả)
+                if (fallbackCodeIdx !== -1 && i >= fallbackCodeIdx) {
+                    if (trimmed === '') continue;
+                    codeLines.push(line);
+                    continue;
+                }
                 if (trimmed === '') {
                     result.push('<br>');
                 } else {
                     result.push(wrapLongLine(line));
                 }
             }
-            // Nếu còn codeLines chưa đóng (trường hợp thiếu ngoặc), vẫn render
             if (codeLines.length) {
                 result.push('<pre><code class="language-java">' +
                     codeLines.map(l =>
@@ -697,7 +746,6 @@
                     ).join('\n') +
                     '</code></pre>');
             }
-            // Loại bỏ các <br> liên tiếp (giữ lại 1)
             let filtered = [];
             for (let i = 0; i < result.length; ++i) {
                 if (result[i] === '<br>' && filtered[filtered.length - 1] === '<br>') continue;
@@ -863,6 +911,33 @@
                     window.hljs && hljs.highlightElement(el);
                 });
             }, 0);
+        }
+
+        function showResult() {
+            // Ví dụ: hiển thị số câu đúng/sai
+            let correctCount = 0;
+            examQuestions.forEach((q, idx) => {
+                const form = document.getElementById('examForm');
+                const isMulti = q.answer.length > 1;
+                let userAns = [];
+                if (isMulti) {
+                    userAns = Array.from(form.querySelectorAll(`input[name="q${idx}"]:checked`)).map(i => i.value);
+                } else {
+                    const checked = form.querySelector(`input[name="q${idx}"]:checked`);
+                    if (checked) userAns = [checked.value];
+                }
+                const correct = userAns.length === q.answer.length &&
+                    userAns.every(a => q.answer.includes(a)) &&
+                    q.answer.every(a => userAns.includes(a));
+                if (correct) correctCount++;
+                // Hiển thị kết quả từng câu nếu muốn
+                submitSingleQuestion(idx);
+            });
+            document.getElementById('result').innerHTML = `
+                <div class="score-display">
+                    Bạn đúng <b>${correctCount}</b> / <b>${examQuestions.length}</b> câu!
+                </div>
+            `;
         }
 
         document.getElementById('startBtn').onclick = async function () {
