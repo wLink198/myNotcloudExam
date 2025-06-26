@@ -15,7 +15,7 @@ export default function handler(req, res) {
     let hadError = false;
 
     files.forEach(filename => {
-        fs.readFile(path.join(__dirname, '..', filename), 'utf8', (err, data) => {
+        fs.readFile(path.join(__dirname, filename), 'utf8', (err, data) => {
             readCount++;
             if (!hadError && err) {
                 hadError = true;
