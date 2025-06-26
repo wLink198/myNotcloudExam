@@ -654,7 +654,6 @@
 
         // Detect and format Java code in question text, with smart line breaks
         function prettyQuestion(text) {
-            console.log('Formatting question text:', text);
             let lines = text.split('\n');
             let result = [];
             let codeLines = [];
@@ -677,16 +676,13 @@
                 let descLines = [];
                 let foundDesc = false;
                 while (i < lines.length) {
-                    console.log('Checking line:', lines[i]);
                     let trimmed = lines[i].trim();
                     if (trimmed === '') {
                         i++;
                         continue;
                     }
-                    console.log('Trimmed line:', trimmed);
                     descLines.push(trimmed);
                     let descText = descLines.join(' ');
-                    console.log('Checking description line:', descText);
                     // Nếu đã tìm thấy pattern mô tả, dừng lại, dòng tiếp theo là code
                     if (/that apply\.\)?$/i.test(descText)) {
                         foundDesc = true;

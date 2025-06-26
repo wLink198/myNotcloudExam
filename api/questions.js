@@ -15,15 +15,19 @@ export default function handler(req, res) {
     let hadError = false;
 
     files.forEach(filename => {
-        fs.readFile(path.join(__dirname, filename), 'utf8', (err, data) => {
+        const filePath = path.join(__dirname, filename);
+        console.log(`[Vercel][questions.js] Reading file: ${filePath}`);
+        fs.readFile(filePath, 'utf8', (err, data) => {
             readCount++;
             if (!hadError && err) {
                 hadError = true;
-                return res.status(500).json({ error: `Cannot read questions from ${filename}` });
+                console.error(`[Vercel][questions.js] Error reading ${filename}:`, err);
+                return res.status(500).json({ error: `Cannot read questions from ${filename}`, detail: err.message });
             }
             if (!err) {
                 try {
                     let questions = JSON.parse(data);
+                    console.log(`[Vercel][questions.js] Loaded ${questions.length} questions from ${filename}`);
                     questions = questions.map(q => {
                         if (!q.choices || !q.choices.length) {
                             q.choices = 'ABCDEF'.split('').map(k => ({
@@ -37,11 +41,13 @@ export default function handler(req, res) {
                 } catch (e) {
                     if (!hadError) {
                         hadError = true;
-                        return res.status(500).json({ error: `Invalid JSON in ${filename}` });
+                        console.error(`[Vercel][questions.js] Invalid JSON in ${filename}:`, e);
+                        return res.status(500).json({ error: `Invalid JSON in ${filename}`, detail: e.message });
                     }
                 }
             }
             if (readCount === files.length && !hadError) {
+                console.log(`[Vercel][questions.js] Successfully loaded total ${allQuestions.length} questions`);
                 res.status(200).json(allQuestions);
             }
         });
