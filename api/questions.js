@@ -1,8 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default function handler(req, res) {
     if (req.method !== 'GET') {
@@ -15,7 +12,7 @@ export default function handler(req, res) {
     let hadError = false;
 
     files.forEach(filename => {
-        const filePath = path.join(__dirname, filename);
+        const filePath = path.join(process.cwd(), 'data', filename);
         console.log(`[Vercel][questions.js] Reading file: ${filePath}`);
         fs.readFile(filePath, 'utf8', (err, data) => {
             readCount++;
@@ -42,7 +39,7 @@ export default function handler(req, res) {
                     if (!hadError) {
                         hadError = true;
                         console.error(`[Vercel][questions.js] Invalid JSON in ${filename}:`, e);
-                        return res.status(500).json({ error: `Invalid JSON in ${filename}`, detail: e.message });
+                        return res.status(500).json({ error: `Invalid JSON in ${filename}`});
                     }
                 }
             }
