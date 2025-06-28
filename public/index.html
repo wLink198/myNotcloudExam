@@ -654,6 +654,23 @@
 
         // Detect and format Java code in question text, with smart line breaks
         function prettyQuestion(text) {
+            // Ưu tiên parse markdown code block nếu có
+            const codeBlockRegex = /```(java)?\n([\s\S]*?)```/g;
+            let match = codeBlockRegex.exec(text);
+            if (match) {
+                // Có code block, tách phần trước, code, và sau (nếu có)
+                let before = text.slice(0, match.index).replace(/\n/g, '<br>');
+                let code = match[2];
+                let after = text.slice(match.index + match[0].length).replace(/\n/g, '<br>');
+                return (
+                    (before ? before + '<br>' : '') +
+                    '<pre><code class="language-java">' +
+                    code.replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+                    '</code></pre>' +
+                    (after ? '<br>' + after : '')
+                );
+            }
+            // Fallback: logic detect code như cũ
             let lines = text.split('\n');
             let result = [];
             let codeLines = [];

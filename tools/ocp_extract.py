@@ -1,91 +1,125 @@
 import re
 import json
 
-def parse_questions(path):
+def split_by_chapter(text):
+    # Split text into (chapter_num, content) tuples, case-insensitive
+    matches = list(re.finditer(r'^\s*chapter\s+(\d+)[:：]?.*$', text, re.MULTILINE | re.IGNORECASE))
+    chapters = []
+    for i, m in enumerate(matches):
+        start = m.end()
+        end = matches[i+1].start() if i+1 < len(matches) else len(text)
+        chapter_num = int(m.group(1))
+        chapters.append((chapter_num, text[start:end]))
+    return chapters
+
+def parse_questions_by_chapter(path):
     with open(path, encoding='utf-8') as f:
         text = f.read()
-    # Tách từng block câu hỏi dựa vào số thứ tự đầu dòng
-    q_blocks = re.split(r'(?m)^\d+\.\s', text)[1:]
-    q_nums = [int(m.group(1)) for m in re.finditer(r'(?m)^(\d+)\.\s', text)]
-    questions = []
-    for idx, block in enumerate(q_blocks):
-        lines = block.split('\n')
-        qtext_lines = []
-        choices = []
-        in_choices = False
-        for line in lines:
-            # Bỏ qua dòng kiểu "Chapter X:"
-            if re.match(r'^\s*Chapter\s+\d+[:：]?\s*$', line):
-                continue
-            # Bỏ qua dòng heading kiểu "56 Chapter 1 ■ Building Blocks"
-            if re.match(r'^\s*\d+\s+Chapter\s+\d+', line):
-                continue
-            # Bỏ qua dòng heading kiểu "Review Questions"
-            if re.match(r'^\s*Review Questions', line):
-                continue
-            m = re.match(r'^([A-Z])\.\s(.+)', line)
-            if m:
-                in_choices = True
-                choices.append({'key': m.group(1), 'text': m.group(2)})
-            else:
-                if not in_choices:
-                    qtext_lines.append(line)
+    chapters = split_by_chapter(text)
+    all_questions = []
+    for chapter_num, chapter_text in chapters:
+        # Split questions by number (e.g. 1. ...), ignore leading whitespace
+        q_blocks = re.split(r'(?m)^\s*\d+\.\s', chapter_text)[1:]
+        for block in q_blocks:
+            lines = block.split('\n')
+            qtext_lines = []
+            choices = []
+            in_choices = False
+            current_choice = None
+            for i, line in enumerate(lines):
+                # Skip headings
+                if re.match(r'^\s*Review Questions', line, re.IGNORECASE):
+                    continue
+                if re.match(r'^\s*\d+\s+Chapter\s+\d+', line, re.IGNORECASE):
+                    continue
+                m = re.match(r'^([A-Z])\.\s*(.*)$', line)
+                if m:
+                    in_choices = True
+                    key = m.group(1)
+                    text = m.group(2)
+                    if text.strip() == '':
+                        # Choice label only, content in next line(s)
+                        # Look ahead for next non-empty line
+                        choice_text = ''
+                        for j in range(i+1, len(lines)):
+                            next_line = lines[j].strip('\r')
+                            if next_line.strip() != '' and not re.match(r'^[A-Z]\.\s*$', next_line):
+                                choice_text = next_line
+                                break
+                        choices.append({'key': key, 'text': choice_text})
+                    else:
+                        choices.append({'key': key, 'text': text})
+                    current_choice = choices[-1]
                 else:
-                    # Nếu đang ở trong phần choices, nối mọi dòng vào choice cuối cùng (kể cả dòng trống)
-                    if choices:
-                        choices[-1]['text'] += '\n' + line
-        # Giữ nguyên định dạng gốc (bao gồm dấu cách đầu dòng, dòng trống)
-        qtext = '\n'.join(qtext_lines).strip()
-        questions.append({
-            'num': q_nums[idx],
-            'question': qtext,
-            'choices': choices
-        })
-    return questions
+                    if not in_choices:
+                        qtext_lines.append(line)
+                    else:
+                        # Append to last choice if not a new choice
+                        if current_choice is not None and line.strip() != '':
+                            current_choice['text'] += '\n' + line
+            qtext = '\n'.join(qtext_lines).strip()
+            all_questions.append({
+                'chapter': chapter_num,
+                'question': qtext,
+                'choices': choices
+            })
+    return all_questions
 
-def parse_answers(path):
+def parse_answers_by_chapter(path):
     with open(path, encoding='utf-8') as f:
         text = f.read()
-    # Xóa các dòng heading appendix/answers
+    # Remove appendix/answers headings
     text = re.sub(r'^\s*\d+\s+Appendix\s+■\s+Answers.*$', '', text, flags=re.MULTILINE)
-    # Tách từng block đáp án dựa vào số thứ tự đầu dòng
-    a_blocks = re.split(r'(?m)^\d+\.\s', text)[1:]
-    a_nums = [int(m.group(1)) for m in re.finditer(r'(?m)^(\d+)\.\s', text)]
-    answers = {}
-    for idx, block in enumerate(a_blocks):
-        # Lấy đáp án (A, B, ...) và phần giải thích
-        m = re.match(r'^([A-Z][, A-Z]*)\.\s*(.*)', block, re.DOTALL)
-        if m:
-            ans = [x.strip() for x in m.group(1).split(',')]
-            # Giữ nguyên định dạng giải thích (cả dấu cách đầu dòng)
-            expl = m.group(2)
-        else:
-            ans = []
-            expl = block
-        answers[a_nums[idx]] = {'answer': ans, 'explanation': expl}
-    return answers
+    chapters = split_by_chapter(text)
+    all_answers = []
+    for chapter_num, chapter_text in chapters:
+        a_blocks = re.split(r'(?m)^\s*\d+\.\s', chapter_text)[1:]
+        for block in a_blocks:
+            m = re.match(r'^([A-Z][, A-Z]*)\.\s*(.*)', block, re.DOTALL)
+            if m:
+                ans = [x.strip() for x in m.group(1).split(',')]
+                expl = m.group(2)
+            else:
+                ans = []
+                expl = block
+            all_answers.append({
+                'chapter': chapter_num,
+                'answer': ans,
+                'explanation': expl
+            })
+    return all_answers
 
-def build_json(questions, answers):
-    result = []
+def build_json_by_chapter(questions, answers):
+    from collections import defaultdict
+    answer_chap_map = defaultdict(list)
+    for a in answers:
+        answer_chap_map[a['chapter']].append(a)
+    question_chap_map = defaultdict(list)
     for q in questions:
-        qnum = q['num']
-        ans = answers.get(qnum, {})
-        result.append({
-            'question': q['question'],
-            'choices': q['choices'],
-            'answer': ans.get('answer', []),
-            'explanation': ans.get('explanation', '')
-        })
+        question_chap_map[q['chapter']].append(q)
+    result = []
+    idx = 1
+    for chapter in sorted(question_chap_map.keys()):
+        qlist = question_chap_map[chapter]
+        alist = answer_chap_map.get(chapter, [])
+        for q_idx, q in enumerate(qlist):
+            a = alist[q_idx] if q_idx < len(alist) else {}
+            result.append({
+                'id': f'ocp-{idx}',
+                'question': q['question'],
+                'choices': q['choices'],
+                'answer': a.get('answer', []),
+                'explanation': a.get('explanation', '')
+            })
+            idx += 1
     return result
 
 def main():
-    questions = parse_questions('e:\\upload\\ocp_questions.txt')
-    answers = parse_answers('e:\\upload\\ocp_answers.txt')
-    data = build_json(questions, answers)
-    with open('e:\\upload\\ocp_qa.json', 'w', encoding='utf-8') as f:
+    questions = parse_questions_by_chapter('D:\\exam-app\\ocp_questions.txt')
+    answers = parse_answers_by_chapter('D:\\exam-app\\ocp_answers.txt')
+    data = build_json_by_chapter(questions, answers)
+    with open('D:\\exam-app\\ocp_qa.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 if __name__ == '__main__':
-    main()
-    main()
     main()
