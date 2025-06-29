@@ -42,23 +42,18 @@ function validateQuestionsLimit(questions) {
     return questions.slice(0, 80);
 }
 
-// API endpoint to get questions (all categories)
+// API endpoint to get questions (all or by category via query param)
 app.get('/api/questions', (req, res) => {
+    const category = req.query.category;
+    if (category && questionsCache[category]) {
+        return res.json(validateQuestionsLimit(questionsCache[category]));
+    }
     // Return all questions from cache
     let allQuestions = [];
     files.forEach(file => {
         allQuestions = allQuestions.concat(questionsCache[file.category] || []);
     });
     res.json(validateQuestionsLimit(allQuestions));
-});
-
-// API endpoint to get questions by category
-app.get('/api/questions/:category', (req, res) => {
-    const category = req.params.category;
-    if (!questionsCache[category]) {
-        return res.status(404).json({ error: 'Category not found' });
-    }
-    res.json(validateQuestionsLimit(questionsCache[category]));
 });
 
 // Fallback to index.html for SPA

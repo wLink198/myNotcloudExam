@@ -1011,7 +1011,7 @@
             if (cat === 'all') {
                 resp = await fetch('/api/questions');
             } else {
-                resp = await fetch('/api/questions/' + cat);
+                resp = await fetch('/api/questions?category=' + encodeURIComponent(cat));
             }
             allQuestions = await resp.json();
             // Validate số câu hỏi tối đa 80

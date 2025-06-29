@@ -56,8 +56,10 @@ export default function handler(req, res) {
         res.status(405).json({ error: 'Method not allowed' });
         return;
     }
-    // Support ?category=oca|ocp|linkedin
-    const { category } = req.query;
+
+    // Lấy category từ path hoặc query (?category=...)
+    let category = req.query.category;
+
     if (category && files.some(f => f.category === category)) {
         const questions = loadQuestions(category);
         return res.status(200).json(validateQuestionsLimit(questions));
