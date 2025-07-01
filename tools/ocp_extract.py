@@ -115,7 +115,7 @@ def build_json_by_chapter(questions, answers):
     return result
 
 def main():
-    questions = parse_questions_by_chapter('E:\\upload\\oca_questions_pretty.txt')
+    questions = parse_questions_by_chapter('E:\\upload\\oca_questions.txt')
     answers = parse_answers_by_chapter('E:\\upload\\oca_answers.txt')
     data = build_json_by_chapter(questions, answers)
     with open('E:\\upload\\oca_qa.json', 'w', encoding='utf-8') as f:
