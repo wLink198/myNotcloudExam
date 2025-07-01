@@ -105,7 +105,7 @@ def build_json_by_chapter(questions, answers):
         for q_idx, q in enumerate(qlist):
             a = alist[q_idx] if q_idx < len(alist) else {}
             result.append({
-                'id': f'ocp-{idx}',
+                'id': f'oca-{idx}',
                 'question': q['question'],
                 'choices': q['choices'],
                 'answer': a.get('answer', []),
@@ -115,10 +115,10 @@ def build_json_by_chapter(questions, answers):
     return result
 
 def main():
-    questions = parse_questions_by_chapter('D:\\exam-app\\ocp_questions.txt')
-    answers = parse_answers_by_chapter('D:\\exam-app\\ocp_answers.txt')
+    questions = parse_questions_by_chapter('E:\\upload\\oca_questions_pretty.txt')
+    answers = parse_answers_by_chapter('E:\\upload\\oca_answers.txt')
     data = build_json_by_chapter(questions, answers)
-    with open('D:\\exam-app\\ocp_qa.json', 'w', encoding='utf-8') as f:
+    with open('E:\\upload\\oca_qa.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 if __name__ == '__main__':

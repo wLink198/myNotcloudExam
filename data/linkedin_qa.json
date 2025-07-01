@@ -49,7 +49,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-3",
@@ -127,7 +127,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-6",
@@ -143,10 +143,12 @@
       },
       {
         "key": "D",
-        "text": "- [x] \"abcde\""
+        "text": "\"abcde\""
       }
     ],
-    "answer": [],
+    "answer": [
+      "D"
+    ],
     "explanation": "** You should assign the result of trim back to the String variable. Otherwise, it is not going to work, because strings in Java are immutable."
   },
   {
@@ -173,7 +175,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-8",
@@ -199,7 +201,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-9",
@@ -225,7 +227,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-10",
@@ -303,7 +305,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-13",
@@ -355,7 +357,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-15",
@@ -381,7 +383,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-16",
@@ -407,7 +409,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-17",
@@ -433,7 +435,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-18",
@@ -459,7 +461,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-19",
@@ -511,7 +513,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-21",
@@ -563,7 +565,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-23",
@@ -589,7 +591,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-24",
@@ -615,7 +617,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-25",
@@ -641,7 +643,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-26",
@@ -667,7 +669,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-27",
@@ -693,7 +695,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-28",
@@ -719,7 +721,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-29",
@@ -745,7 +747,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-30",
@@ -771,7 +773,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-31",
@@ -797,7 +799,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-32",
@@ -823,7 +825,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-33",
@@ -875,7 +877,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-35",
@@ -927,7 +929,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-37",
@@ -953,7 +955,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-38",
@@ -1005,7 +1007,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-40",
@@ -1031,7 +1033,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-41",
@@ -1057,7 +1059,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-42",
@@ -1083,7 +1085,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-43",
@@ -1109,7 +1111,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-44",
@@ -1135,7 +1137,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-45",
@@ -1161,7 +1163,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-46",
@@ -1187,7 +1189,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-47",
@@ -1213,7 +1215,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-48",
@@ -1265,7 +1267,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-50",
@@ -1291,7 +1293,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-51",
@@ -1317,7 +1319,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-52",
@@ -1343,7 +1345,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-53",
@@ -1369,7 +1371,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-54",
@@ -1395,7 +1397,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-55",
@@ -1421,7 +1423,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-56",
@@ -1473,7 +1475,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-58",
@@ -1499,7 +1501,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-59",
@@ -1525,7 +1527,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-60",
@@ -1551,7 +1553,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-61",
@@ -1603,7 +1605,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-63",
@@ -1629,7 +1631,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-64",
@@ -1655,7 +1657,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-65",
@@ -1681,7 +1683,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-66",
@@ -1707,7 +1709,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-67",
@@ -1733,7 +1735,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-68",
@@ -1759,7 +1761,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-69",
@@ -1785,7 +1787,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-70",
@@ -1811,7 +1813,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-71",
@@ -1837,7 +1839,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-72",
@@ -1863,7 +1865,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-73",
@@ -1889,7 +1891,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-74",
@@ -1915,7 +1917,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-75",
@@ -1941,7 +1943,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-76",
@@ -1967,7 +1969,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-77",
@@ -1993,7 +1995,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-78",
@@ -2019,7 +2021,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-79",
@@ -2045,7 +2047,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-80",
@@ -2071,7 +2073,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-81",
@@ -2097,7 +2099,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-82",
@@ -2123,7 +2125,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-83",
@@ -2149,7 +2151,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-84",
@@ -2201,7 +2203,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-86",
@@ -2227,7 +2229,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-87",
@@ -2253,7 +2255,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-88",
@@ -2279,7 +2281,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-89",
@@ -2331,7 +2333,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-91",
@@ -2357,7 +2359,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-92",
@@ -2383,7 +2385,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-93",
@@ -2409,7 +2411,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-94",
@@ -2461,7 +2463,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-96",
@@ -2487,7 +2489,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-97",
@@ -2513,7 +2515,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-98",
@@ -2539,7 +2541,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-99",
@@ -2565,7 +2567,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-100",
@@ -2591,7 +2593,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-101",
@@ -2617,7 +2619,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-102",
@@ -2643,7 +2645,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-103",
@@ -2669,7 +2671,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-104",
@@ -2695,7 +2697,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-105",
@@ -2721,7 +2723,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-106",
@@ -2747,7 +2749,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-107",
@@ -2773,7 +2775,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-108",
@@ -2799,7 +2801,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-109",
@@ -2825,7 +2827,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-110",
@@ -2851,7 +2853,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-111",
@@ -2877,7 +2879,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-112",
@@ -2903,7 +2905,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-113",
@@ -2929,7 +2931,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-114",
@@ -2955,7 +2957,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-115",
@@ -3033,7 +3035,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-118",
@@ -3059,7 +3061,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-119",
@@ -3085,7 +3087,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-120",
@@ -3111,7 +3113,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-121",
@@ -3137,7 +3139,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-122",
@@ -3189,7 +3191,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-124",
@@ -3215,7 +3217,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-125",
@@ -3267,7 +3269,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-127",
@@ -3293,7 +3295,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-128",
@@ -3319,7 +3321,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-129",
@@ -3345,7 +3347,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-130",
@@ -3371,7 +3373,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-131",
@@ -3397,7 +3399,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-132",
@@ -3423,7 +3425,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-133",
@@ -3449,7 +3451,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-134",
@@ -3475,7 +3477,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-135",
@@ -3501,7 +3503,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-136",
@@ -3527,7 +3529,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-137",
@@ -3553,7 +3555,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-138",
@@ -3579,7 +3581,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-139",
@@ -3605,7 +3607,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-140",
@@ -3657,7 +3659,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-142",
@@ -3683,7 +3685,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-143",
@@ -3709,7 +3711,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-144",
@@ -3735,7 +3737,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-145",
@@ -3761,7 +3763,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-146",
@@ -3787,7 +3789,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-147",
@@ -3813,7 +3815,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-148",
@@ -3891,7 +3893,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-151",
@@ -3917,7 +3919,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-152",
@@ -3943,7 +3945,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-153",
@@ -3969,7 +3971,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-154",
@@ -3995,7 +3997,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-155",
@@ -4021,7 +4023,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-156",
@@ -4047,7 +4049,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-157",
@@ -4099,7 +4101,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-159",
@@ -4125,7 +4127,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-160",
@@ -4151,7 +4153,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-161",
@@ -4177,7 +4179,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-162",
@@ -4203,7 +4205,7 @@
     "answer": [
       "D"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-163",
@@ -4229,7 +4231,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-164",
@@ -4255,7 +4257,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-165",
@@ -4307,7 +4309,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-167",
@@ -4333,7 +4335,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-168",
@@ -4359,7 +4361,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-169",
@@ -4385,7 +4387,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-170",
@@ -4411,7 +4413,7 @@
     "answer": [
       "C"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-171",
@@ -4437,7 +4439,7 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-172",
@@ -4463,7 +4465,7 @@
     "answer": [
       "B"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   },
   {
     "id": "linkedin-173",
@@ -4489,6 +4491,6 @@
     "answer": [
       "A"
     ],
-    "explanation": "Google serach or AI for this shiet bro."
+    "explanation": "The question is easy. No explaination needed!"
   }
 ]
