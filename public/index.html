@@ -1016,7 +1016,7 @@
             allQuestions = await resp.json();
             // Validate số câu hỏi tối đa 80
             let n = parseInt(document.getElementById('numQuestions').value);
-            if (isNaN(n) || n < 1) n = 1;
+            if (isNaN(n) || n < 1) n = 10;
             if (n > 80) n = 80;
             n = Math.min(n, allQuestions.length);
             document.getElementById('numQuestions').value = n; // cập nhật lại input nếu > 80

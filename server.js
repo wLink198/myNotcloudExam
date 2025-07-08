@@ -12,6 +12,7 @@ const questionsCache = {};
 const files = [
     { name: 'oca_qa.json', category: 'oca' },
     { name: 'ocp_qa.json', category: 'ocp' },
+    { name: 'ocp21_qa.json', category: 'ocp' },
     { name: 'linkedin_qa.json', category: 'linkedin' }
 ];
 
@@ -45,15 +46,21 @@ function validateQuestionsLimit(questions) {
 // API endpoint to get questions (all or by category via query param)
 app.get('/api/questions', (req, res) => {
     const category = req.query.category;
+
+    if (!category) {
+        // Return all questions from cache
+        let allQuestions = [];
+        files.forEach(file => {
+            allQuestions = allQuestions.concat(questionsCache[file.category] || []);
+        });
+        return res.json(validateQuestionsLimit(allQuestions));
+    }
+
     if (category && questionsCache[category]) {
         return res.json(validateQuestionsLimit(questionsCache[category]));
     }
-    // Return all questions from cache
-    let allQuestions = [];
-    files.forEach(file => {
-        allQuestions = allQuestions.concat(questionsCache[file.category] || []);
-    });
-    res.json(validateQuestionsLimit(allQuestions));
+
+    return res.json([]);
 });
 
 // Fallback to index.html for SPA

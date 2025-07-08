@@ -65,6 +65,39 @@ def parse_questions_by_chapter(path):
             })
     return all_questions
 
+import re
+
+def parse_answers_by_chapter_V2(path):
+    with open(path, encoding='utf-8') as f:
+        text = f.read()
+    # Remove appendix/answers headings
+    text = re.sub(r'^\s*\d+\s+Appendix\s+■\s+Answers.*$', '', text, flags=re.MULTILINE)
+    chapters = split_by_chapter(text)
+    all_answers = []
+    for chapter_num, chapter_text in chapters:
+        # Split by question number, keeping the answer part
+        a_blocks = re.split(r'(?m)^\s*\d+\.(?=\s*[A-Z])', chapter_text)[1:]
+        for block in a_blocks:
+            block = block.strip()
+            # Match patterns like "A, B and D. Explanation" or "C and D. Explanation"
+            m = re.match(r'^([A-Z][^\.]*)\.\s*(.*)', block, re.DOTALL)
+            if m:
+                raw_ans = m.group(1)
+                # Normalize: replace "and" with "," and split
+                raw_ans = raw_ans.replace(' and ', ',')
+                ans = [x.strip() for x in raw_ans.split(',') if x.strip()]
+                expl = m.group(2).strip()
+            else:
+                ans = []
+                expl = block
+            all_answers.append({
+                'chapter': chapter_num,
+                'answer': ans,
+                'explanation': expl
+            })
+
+    return all_answers
+
 def parse_answers_by_chapter(path):
     with open(path, encoding='utf-8') as f:
         text = f.read()
@@ -73,7 +106,7 @@ def parse_answers_by_chapter(path):
     chapters = split_by_chapter(text)
     all_answers = []
     for chapter_num, chapter_text in chapters:
-        a_blocks = re.split(r'(?m)^\s*\d+\.\s', chapter_text)[1:]
+        a_blocks = re.split(r'(?m)^\s*\d+\.(?=[A-Z])', chapter_text)[1:]
         for block in a_blocks:
             m = re.match(r'^([A-Z][, A-Z]*)\.\s*(.*)', block, re.DOTALL)
             if m:
@@ -98,14 +131,14 @@ def build_json_by_chapter(questions, answers):
     for q in questions:
         question_chap_map[q['chapter']].append(q)
     result = []
-    idx = 1
+    idx = 357 # for ocp21
     for chapter in sorted(question_chap_map.keys()):
         qlist = question_chap_map[chapter]
         alist = answer_chap_map.get(chapter, [])
         for q_idx, q in enumerate(qlist):
             a = alist[q_idx] if q_idx < len(alist) else {}
             result.append({
-                'id': f'oca-{idx}',
+                'id': f'ocp-{idx}',
                 'question': q['question'],
                 'choices': q['choices'],
                 'answer': a.get('answer', []),
@@ -115,10 +148,10 @@ def build_json_by_chapter(questions, answers):
     return result
 
 def main():
-    questions = parse_questions_by_chapter('E:\\upload\\oca_questions.txt')
-    answers = parse_answers_by_chapter('E:\\upload\\oca_answers.txt')
+    questions = parse_questions_by_chapter('E:\\upload\\ocp21_questions.txt')
+    answers = parse_answers_by_chapter_V2('E:\\upload\\ocp21_answers.txt')
     data = build_json_by_chapter(questions, answers)
-    with open('E:\\upload\\oca_qa.json', 'w', encoding='utf-8') as f:
+    with open('E:\\upload\\ocp21_qa.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 if __name__ == '__main__':

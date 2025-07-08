@@ -4,6 +4,7 @@ import path from 'path';
 const files = [
     { name: 'oca_qa.json', category: 'oca' },
     { name: 'ocp_qa.json', category: 'ocp' },
+    { name: 'ocp21_qa.json', category: 'ocp' },
     { name: 'linkedin_qa.json', category: 'linkedin' }
 ];
 
@@ -60,11 +61,15 @@ export default function handler(req, res) {
     // Lấy category từ path hoặc query (?category=...)
     let category = req.query.category;
 
+    if (!category) {
+        const allQuestions = loadAllQuestions();
+        res.status(200).json(validateQuestionsLimit(allQuestions));
+    }
+
     if (category && files.some(f => f.category === category)) {
         const questions = loadQuestions(category);
         return res.status(200).json(validateQuestionsLimit(questions));
     }
-    // Default: return all
-    const allQuestions = loadAllQuestions();
-    res.status(200).json(validateQuestionsLimit(allQuestions));
+
+    res.status(404).json([]);
 }
