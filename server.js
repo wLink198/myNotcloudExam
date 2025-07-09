@@ -20,11 +20,18 @@ const files = [
 function loadQuestionsToCache() {
     files.forEach(file => {
         const filePath = path.join(__dirname, 'data', file.name);
-        if (!questionsCache[file.category]) {
-            try {
-                const data = fs.readFileSync(filePath, 'utf8');
-                questionsCache[file.category] = JSON.parse(data);
-            } catch (e) {
+        try {
+            const data = fs.readFileSync(filePath, 'utf8');
+            const parsedData = JSON.parse(data);
+
+            if (!questionsCache[file.category]) {
+                questionsCache[file.category] = parsedData;
+            } else {
+                questionsCache[file.category] = questionsCache[file.category].concat(parsedData);
+            }
+        } catch (e) {
+            console.error(`Error loading file ${file.name}:`, e);
+            if (!questionsCache[file.category]) {
                 questionsCache[file.category] = [];
             }
         }
@@ -38,26 +45,36 @@ loadQuestionsToCache();
 app.use(express.static(__dirname));
 
 // Helper: limit questions to max 80
-function validateQuestionsLimit(questions) {
+function validateQuestionsLimit(questions, n) {
     if (!Array.isArray(questions)) return [];
-    return questions.slice(0, 80);
+    if (n > 80) n = 80;
+    n = Math.min(n, questions.length);
+    shuffle(questions);
+    return questions.slice(0, n);
+}
+
+function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
 }
 
 // API endpoint to get questions (all or by category via query param)
 app.get('/api/questions', (req, res) => {
     const category = req.query.category;
-
+    const num = parseInt(req.query.n) || 10; // Default to 10 if not specified
     if (!category) {
         // Return all questions from cache
         let allQuestions = [];
         files.forEach(file => {
             allQuestions = allQuestions.concat(questionsCache[file.category] || []);
         });
-        return res.json(validateQuestionsLimit(allQuestions));
+        return res.json(validateQuestionsLimit(allQuestions, num));
     }
 
     if (category && questionsCache[category]) {
-        return res.json(validateQuestionsLimit(questionsCache[category]));
+        return res.json(validateQuestionsLimit(questionsCache[category], num));
     }
 
     return res.json([]);

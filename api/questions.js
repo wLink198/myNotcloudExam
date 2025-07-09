@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
+// Simple in-memory cache (per Vercel instance)
+const questionsCache = {};
 const files = [
     { name: 'oca_qa.json', category: 'oca' },
     { name: 'ocp_qa.json', category: 'ocp' },
@@ -8,68 +10,70 @@ const files = [
     { name: 'linkedin_qa.json', category: 'linkedin' }
 ];
 
-// Simple in-memory cache (per Vercel instance)
-const questionsCache = {};
-
-// Helper: limit questions to max 80
-function validateQuestionsLimit(questions) {
-    if (!Array.isArray(questions)) return [];
-    return questions.slice(0, 80);
-}
-
-// Load questions for a category (sync, for simplicity)
-function loadQuestions(category) {
-    const file = files.find(f => f.category === category);
-    if (!file) return [];
-    if (questionsCache[category]) return questionsCache[category];
-    try {
-        const filePath = path.join(process.cwd(), 'data', file.name);
-        const data = fs.readFileSync(filePath, 'utf8');
-        let questions = JSON.parse(data);
-        questions = questions.map(q => {
-            if (!q.choices || !q.choices.length) {
-                q.choices = 'ABCDEF'.split('').map(k => ({
-                    key: k,
-                    text: `Choice ${k}`
-                }));
-            }
-            return q;
-        });
-        questionsCache[category] = questions;
-        return questions;
-    } catch {
-        questionsCache[category] = [];
-        return [];
+// Shuffle helper
+function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
     }
 }
 
-// Load all questions (all categories)
+// Limit questions
+function validateQuestionsLimit(questions, n) {
+    if (!Array.isArray(questions)) return [];
+    n = Math.min(n, 80, questions.length);
+    shuffle(questions);
+    return questions.slice(0, n);
+}
+
+// Load questions from file
+function loadQuestions(category) {
+    const matchedFiles = files.filter(f => f.category === category);
+    if (matchedFiles.length === 0) return [];
+
+    let allQuestions = [];
+
+    matchedFiles.forEach(file => {
+        try {
+            const filePath = path.join(process.cwd(), 'data', file.name);
+            const data = fs.readFileSync(filePath, 'utf8');
+            const parsedData = JSON.parse(data);
+            allQuestions = allQuestions.concat(parsedData);
+        } catch (e) {
+            console.error(`Error loading file ${file.name}:`, e);
+        }
+    });
+
+    return allQuestions;
+}
+
+// Load all questions
 function loadAllQuestions() {
     let all = [];
-    files.forEach(f => {
-        all = all.concat(loadQuestions(f.category));
+    files.forEach(file => {
+        all = all.concat(loadQuestions(file.category));
     });
     return all;
 }
 
+// Vercel API handler
 export default function handler(req, res) {
     if (req.method !== 'GET') {
-        res.status(405).json({ error: 'Method not allowed' });
-        return;
+        return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    // Lấy category từ path hoặc query (?category=...)
-    let category = req.query.category;
+    const category = req.query.category;
+    const num = parseInt(req.query.n) || 10;
 
     if (!category) {
         const allQuestions = loadAllQuestions();
-        res.status(200).json(validateQuestionsLimit(allQuestions));
+        return res.status(200).json(validateQuestionsLimit(allQuestions, num));
     }
 
-    if (category && files.some(f => f.category === category)) {
+    if (questionsCache[category] || files.some(f => f.category === category)) {
         const questions = loadQuestions(category);
-        return res.status(200).json(validateQuestionsLimit(questions));
+        return res.status(200).json(validateQuestionsLimit(questions, num));
     }
 
-    res.status(404).json([]);
+    return res.status(404).json([]);
 }

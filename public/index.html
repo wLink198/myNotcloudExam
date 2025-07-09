@@ -667,13 +667,6 @@
         let submitted = false;
         let currentQuestionIndex = 0;
 
-        function shuffle(arr) {
-            for (let i = arr.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [arr[i], arr[j]] = [arr[j], arr[i]];
-            }
-        }
-
         function updateProgress() {
             const progress = (currentQuestionIndex / examQuestions.length) * 100;
             document.getElementById('progressBar').style.width = progress + '%';
@@ -1007,22 +1000,19 @@
         document.getElementById('startBtn').onclick = async function () {
             // Lấy category
             const cat = document.getElementById('categorySelect').value;
+            let n = parseInt(document.getElementById('numQuestions').value);
+            if (isNaN(n) || n < 1) n = 10;
             let resp;
             if (cat === 'all') {
-                resp = await fetch('/api/questions');
+                resp = await fetch(`/api/questions?n=${n}`);
             } else {
-                resp = await fetch('/api/questions?category=' + encodeURIComponent(cat));
+                resp = await fetch(`/api/questions?n=${n}&category=` + encodeURIComponent(cat));
             }
             allQuestions = await resp.json();
             // Validate số câu hỏi tối đa 80
-            let n = parseInt(document.getElementById('numQuestions').value);
-            if (isNaN(n) || n < 1) n = 10;
             if (n > 80) n = 80;
-            n = Math.min(n, allQuestions.length);
             document.getElementById('numQuestions').value = n; // cập nhật lại input nếu > 80
             examQuestions = allQuestions.slice();
-            shuffle(examQuestions);
-            examQuestions = examQuestions.slice(0, n);
             document.getElementById('result').innerHTML = '';
             submitted = false;
             renderExam();
