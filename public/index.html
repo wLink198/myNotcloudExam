@@ -847,24 +847,41 @@
                 qDiv.className = 'question-card glass-card';
                 qDiv.style.setProperty('--i', idx);
                 qDiv.innerHTML = `
-          <div class="card-body">
-            <div class="question-title">
-                <i class="fas fa-lightbulb"></i>
-                Câu ${idx + 1}:
-            </div>
-            <div class="question-content">${prettyQuestion(q.question)}</div>
-        `;
+                <div class="card-body">
+                    <div class="question-title">
+                        <i class="fas fa-lightbulb"></i>
+                        Câu ${idx + 1}:
+                    </div>
+                    <div class="question-content">${prettyQuestion(q.question)}</div>
+                `;
                 q.choices.forEach(choice => {
                     const inputType = isMulti ? 'checkbox' : 'radio';
                     const name = `q${idx}`;
                     const id = `q${idx}_${choice.key}`;
-                    qDiv.innerHTML += `
-            <label class="choice-label" for="${id}" data-key="${choice.key}">
-              <input type="${inputType}" name="${name}" value="${choice.key}" id="${id}">
-              <div class="choice-key">${choice.key}</div>
-              <span>${choice.text}</span>
-            </label>
-          `;
+
+                    const label = document.createElement('label');
+                    label.className = 'choice-label';
+                    label.setAttribute('for', id);
+                    label.dataset.key = choice.key;
+
+                    const input = document.createElement('input');
+                    input.type = inputType;
+                    input.name = name;
+                    input.value = choice.key;
+                    input.id = id;
+
+                    const keyDiv = document.createElement('div');
+                    keyDiv.className = 'choice-key';
+                    keyDiv.textContent = choice.key;
+
+                    const span = document.createElement('span');
+                    span.textContent = choice.text?.toString() ?? ''; // An toàn, không escape
+
+                    label.appendChild(input);
+                    label.appendChild(keyDiv);
+                    label.appendChild(span);
+
+                    qDiv.appendChild(label);
                 });
                 // Nút nộp từng câu
                 qDiv.innerHTML += `<button type="button" class="btn submit-question-btn" data-idx="${idx}">
